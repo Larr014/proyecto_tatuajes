@@ -1,0 +1,18 @@
+plugins vscode:
+1.- es7 react/reduc/react-native snippets
+2.- simple react snippets
+
+Navegador:
+React developer tools
+
+Comandos Terminal:
+npx create-react-app nombreProyecto
+npm start
+npmp install react-router-dom
+
+Comandos React
+rafc //Genera lo minimo para un componente
+
+Componentes
+BrowserRouter, Routes, Route -> Direccionamiento
+NavLink to -> Direccionar desde el menu al componente

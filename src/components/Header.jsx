@@ -1,20 +1,21 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
     return (
         <>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Home</a>
+                    <NavLink to={"/"} className="nav-link" >Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Mision</a>
+                    <NavLink to={"/mision"} className="nav-link" >Mision</NavLink>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Vision</a>
+                    <NavLink to={"/vision"} className="nav-link">Vision</NavLink>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Imagenes</a>
+                    <NavLink to={"/imagenes"} className="nav-link">Imagenes</NavLink>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link">Contacto</a>
