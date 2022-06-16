@@ -16,3 +16,7 @@ rafc //Genera lo minimo para un componente
 Componentes
 BrowserRouter, Routes, Route -> Direccionamiento
 NavLink to -> Direccionar desde el menu al componente
+props -> propiedades que puedes pasar entre componentes
+
+Hooks
+useState -> Sirve para manejar estados de variables

@@ -7,9 +7,11 @@ import { Home } from './components/Home';
 import { Vision } from './components/Vision';
 import { Mision } from './components/Mision';
 import { Imagenes } from './components/Imagenes';
+import { Contacto } from './components/Contacto';
 
 function App() {
-
+  var nombre = "juan";
+  var ap = "Perez";
   return (
     <>
       
@@ -20,6 +22,7 @@ function App() {
         <Route exact path="/vision" element={<Vision/>} />
         <Route exact path="/mision" element={<Mision/>} />
         <Route exact path="/imagenes" element={<Imagenes/>} />
+        <Route exact path="/contacto" element={<Contacto/>} />
       </Routes>
       <Footer/>
       </BrowserRouter>
