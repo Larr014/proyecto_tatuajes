@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 export const Login = () => {
@@ -6,18 +7,20 @@ export const Login = () => {
     const [contrasenia,setContrasenia] = useState()
     const [error,setError] = useState()
     const navigate = useNavigate()
-    const [users,setUsers] = useState()
-    const entrar = ()=>{
+    const [users,setUsers] = useState([])
+    useEffect(()=>{
         setUsers(JSON.parse(localStorage.getItem("users")))
-        alert(users)
-        if(usuario=="admin" && contrasenia=="admin"){
-            setError("")
-            //Direccionar a la intranet
-            navigate('/intranet')
+    },[])
+    const entrar = ()=>{
+        for (const item of users) {
+            if(usuario==item['u'] && contrasenia==item['p']){
+                setError("")
+                //Direccionar a la intranet
+                navigate('/intranet')
+            }
         }
-        else{
             setError("Las credenciales no coinciden")
-        }
+        
     }
   return (
     <>
