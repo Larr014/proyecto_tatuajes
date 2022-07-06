@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { Home } from './Home'
@@ -8,6 +10,11 @@ import { Mision } from './Mision'
 import { Vision } from './Vision'
 
 export const Principal = (props) => {
+    const [users,setUsers] = useState([{"u":"admin","p":"admin"},{"u":"user","p":"user"}])
+       
+        useEffect(()=>{
+            localStorage.setItem('users', JSON.stringify(users));
+        },[]);
     const cargarVista = ()=>{
         
         switch (props.ruta) {
