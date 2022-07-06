@@ -8,6 +8,8 @@ import { Vision } from './components/Vision';
 import { Mision } from './components/Mision';
 import { Imagenes } from './components/Imagenes';
 import { Contacto } from './components/Contacto';
+import { Principal } from './components/Principal';
+import { Intranet } from './components/Intranet/Intranet';
 
 function App() {
   var nombre = "juan";
@@ -16,15 +18,18 @@ function App() {
     <>
       
       <BrowserRouter>
-      <Header/>
+      
       <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/vision" element={<Vision/>} />
-        <Route exact path="/mision" element={<Mision/>} />
-        <Route exact path="/imagenes" element={<Imagenes/>} />
-        <Route exact path="/contacto" element={<Contacto/>} />
+        <Route exact path="/" element={<Principal ruta="/"/>} />
+        <Route exact path="/vision" element={<Principal ruta="vision"/>} />
+        <Route exact path="/mision" element={<Principal ruta="mision" />} />
+        <Route exact path="/imagenes" element={<Principal ruta="imagenes" />} />
+        <Route exact path="/contacto" element={<Principal ruta="contacto" />} />
+        <Route exact path="/login" element={<Principal ruta="login" />} />
+        <Route exact path="/intranet" element={<Intranet ruta="main" />} />
+      
       </Routes>
-      <Footer/>
+      
       </BrowserRouter>
 
 
