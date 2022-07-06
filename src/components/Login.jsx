@@ -6,7 +6,10 @@ export const Login = () => {
     const [contrasenia,setContrasenia] = useState()
     const [error,setError] = useState()
     const navigate = useNavigate()
+    const [users,setUsers] = useState()
     const entrar = ()=>{
+        setUsers(JSON.parse(localStorage.getItem("users")))
+        alert(users)
         if(usuario=="admin" && contrasenia=="admin"){
             setError("")
             //Direccionar a la intranet

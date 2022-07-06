@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Contacto } from './Contacto';
 import { Footer } from './Footer';
 import { Header } from './Header';
@@ -9,6 +11,12 @@ import { Mision } from './Mision';
 import { Vision } from './Vision';
 
 export const Principal = (props) => {
+    const [users,setUsers] = useState([{'u':'admin','p':'admin'},{'u':'user','p':'user'}])
+    useEffect(()=>{
+        localStorage.setItem("users",JSON.stringify(users))
+    },[])
+
+
     const direccionar = ()=>{
         switch (props.ruta) {
             case "/":
